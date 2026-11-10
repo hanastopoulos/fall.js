@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fall.js demo</title>
+  <script src="fall.js" data-unit="char" data-interval="120" data-cycle="3000" data-wind="8"></script>
+  <style>
+    body { font: 18px/1.6 Georgia, serif; color: #111; background: #faf7f0; max-width: 46rem; margin: 3rem auto; padding: 0 1rem 40vh; }
+    h1 { font-size: 2.6rem; margin-bottom: .2em; }
+    h2 { font-family: system-ui, sans-serif; letter-spacing: .04em; }
+    code { background: #eee6d6; padding: 0 .3em; }
+    .controls { position: fixed; top: 1rem; right: 1rem; font-family: system-ui, sans-serif; }
+    button { font: inherit; padding: .3em .8em; }
+  </style>
+</head>
+<body>
+  <div class="controls" data-fall-skip>
+    <button onclick="Fall.start({ unit: 'char', interval: 120 })">Letters</button>
+    <button onclick="Fall.reset().start({ unit: 'word', interval: 300 })">Words</button>
+    <button onclick="Fall.stop()">Stop</button>
+    <button onclick="Fall.reset()">Reset</button>
+  </div>
+
+  <h1>To Autumn</h1>
+  <p><em>John Keats, 1819</em></p>
+
+  <p>Season of mists and mellow fruitfulness, close bosom-friend of the maturing sun; conspiring with him how to load and bless with fruit the vines that round the thatch-eves run; to bend with apples the moss'd cottage-trees, and fill all fruit with ripeness to the core; to swell the gourd, and plump the hazel shells with a sweet kernel; to set budding more, and still more, later flowers for the bees, until they think warm days will never cease, for summer has o'er-brimm'd their clammy cells.</p>
+
+  <h2>Second stanza</h2>
+  <p>Who hath not seen thee oft amid thy store? Sometimes whoever seeks abroad may find thee sitting careless on a granary floor, thy hair soft-lifted by the winnowing wind; or on a half-reap'd furrow sound asleep, drows'd with the fume of poppies, while thy hook spares the next swath and all its twined flowers: and sometimes like a gleaner thou dost keep steady thy laden head across a brook; or by a cyder-press, with patient look, thou watchest the last oozings hours by hours.</p>
+
+  <h2>Third stanza</h2>
+  <p>Where are the songs of spring? Ay, where are they? Think not of them, thou hast thy music too, while barred clouds bloom the soft-dying day, and touch the stubble-plains with rosy hue; then in a wailful choir the small gnats mourn among the river sallows, borne aloft or sinking as the light wind lives or dies; and full-grown lambs loud bleat from hilly bourn; hedge-crickets sing; and now with treble soft the red-breast whistles from a garden-croft; and gathering swallows twitter in the skies.</p>
+
+  <p>Loaded with <code>&lt;script src="fall.js" data-interval="120" data-wind="8"&gt;</code>. The buttons in the corner carry <code>data-fall-skip</code>, so they keep their letters.</p>
+</body>
+</html>
